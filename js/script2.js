@@ -7,20 +7,21 @@ const targetElement = document.getElementById('target');
 const shoppingList = ['pane', 'pasta', 'latte', 'origano', 'sale'];
 
 
-let myList = '<ul>';
+// Metodo per stampare in pagina con i nodi
 
 let i = 0;
 
 while (i < shoppingList.length){
-    myList += `<li>${shoppingList[i]}</li>`;
-    i++;
+  shopping = shoppingList[i];
+  const itemElement = document.createElement('li');
+  itemElement.append(shopping);
+  targetElement.appendChild(itemElement);
+  i++;
 }
+  
 
 
 
-myList += '</ul>';
 
 
-// Stampo la lista in pagina con i template literals
 
-targetElement.innerHTML = myList;
